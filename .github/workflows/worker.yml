@@ -18,9 +18,11 @@ jobs:
         with:
           ref: runner
       - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git fetch
           git config pull.rebase false
-          git pull origin master
+          git pull -X theirs origin master --allow-unrelated-histories --no-edit
 
       - name: create queue
         id: create-json
