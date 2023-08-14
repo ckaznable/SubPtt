@@ -122,9 +122,9 @@ def main():
             if board == None:
                 continue
 
-            current_posts = get_post(ptt, board, index=index, condition=condition)
+            current_posts = extract_posts(get_post(ptt, board, index=index, condition=condition))
             print("Getting posts from {} with '{}' condition, result: {}".format(board, condition, len(current_posts)))
-            posts.extend(extract_posts(current_posts))
+            posts.extend(current_posts)
 
             if len(current_posts) > 0:
                 status.set(board, current_posts[0][2], condition)
