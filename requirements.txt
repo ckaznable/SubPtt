@@ -1,3 +1,3 @@
-PyPtt==1.0.9
+PyPtt==1.0.11
 python-dotenv==1.0.0
 python_telegram_bot==20.4
