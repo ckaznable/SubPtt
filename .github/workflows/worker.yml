@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   crawling:
+    if: false
     name: Crawling PTT
     runs-on: ubuntu-latest
     steps:
